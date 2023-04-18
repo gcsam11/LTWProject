@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Forgot Password</title>
         <link href="forgot_psw.css" rel="stylesheet">
     </head>
@@ -19,8 +20,16 @@
                 <div class="clearfix">
                     <button type="submit" class="submitbtn">Submit</button>
                 </div>
-                <a href="login.html">Back to Login</a>
+                <p id="back_to_login"><a href="login.php"> <- Back to Login</a></p>
             </div>
         </form>
+        <footer>
+            <div class="names">
+                <p>© David Cordeiro</p>
+                <p>Diogo Viana</p>
+                <p>Gonçalo Martins</p>
+            </div>
+            <p>LTW 2023</p>
+        </footer> 
     </body>
 </html>

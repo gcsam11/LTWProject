@@ -1,0 +1,193 @@
+:root {
+    --clr-neon: #04AA6D;
+    --clr-bg: #f8f9fa;
+}
+  
+*,
+*::before
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+	position: relative;
+	margin: 20px auto 0;
+	width: 900px;
+	height: 75px;
+	background: var(--clr-bg);
+	border-radius: 8px;
+	font-size: 0;
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+nav a{
+	font-family: 'Inter', sans-serif;
+	font-size: 26px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: black;
+	text-decoration: none;
+	line-height: 75px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+
+nav .animation {
+	position: absolute;
+	height: 5px;
+	bottom: 0;
+	z-index: 0;
+	background: var(--clr-neon);
+	border-radius: 8px;
+	transition: all .5s ease 0s;
+    box-shadow: 0 0 10px 0 var(--clr-neon);
+}
+
+nav a:nth-child(1) {
+	width: 300px;
+}
+nav .start-my_tickets, nav a:nth-child(1):hover~.animation {
+	width: 300px;
+	left: 0;
+}
+
+nav a:nth-child(2) {
+	width: 300px;
+}
+nav .start-all_tickets, nav a:nth-child(2):hover~.animation {
+	width: 300px;
+	left: 300px;
+}
+
+nav a:nth-child(3) {
+	width: 300px;
+}
+nav .start-profile, nav a:nth-child(3):hover~.animation {
+	width: 300px;
+	left: 600px;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 20px;
+}
+
+select{
+    border-radius: 4px;
+    width:10%;
+    margin-top: 1%;
+}
+
+form input[type=text], input[type="password"]{
+    width: 50%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label{
+    text-align: left;
+    font-weight: 800;
+}
+
+.labels{
+    display: grid;
+}
+
+.savebtn {
+    background-color: var(--clr-bg);
+    color: var(--clr-neon);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 3px solid var(--clr-neon);
+    border-radius: 32px;
+    cursor: pointer;
+    opacity: 1;
+    text-align: center;
+    font-weight: 800;
+    font-size: large;
+    width: 25%;
+    transition: opacity 100ms linear;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.45em var(--clr-neon);
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+}
+  
+.savebtn:hover {
+    background-color: var(--clr-neon);
+    color: var(--clr-bg);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 3px solid var(--clr-neon);
+    border-radius: 32px;
+    cursor: pointer;
+    opacity: 1;
+    text-align: center;
+    font-weight: 800;
+    font-size: large;
+    width: 25%;
+    transition: opacity 100ms linear;
+    text-shadow: none;
+}
+
+.logoutbtn {
+    background-color: var(--clr-bg);
+    color: var(--clr-neon);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 3px solid var(--clr-neon);
+    border-radius: 32px;
+    cursor: pointer;
+    opacity: 1;
+    text-align: center;
+    font-weight: 800;
+    font-size: large;
+    width: 25%;
+    transition: opacity 100ms linear;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.45em var(--clr-neon);
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+}
+  
+.logoutbtn:hover {
+    background-color: var(--clr-neon);
+    color: var(--clr-bg);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 3px solid var(--clr-neon);
+    border-radius: 32px;
+    cursor: pointer;
+    opacity: 1;
+    text-align: center;
+    font-weight: 800;
+    font-size: large;
+    width: 25%;
+    transition: opacity 100ms linear;
+    text-shadow: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+.labels {
+    padding-left: 25%;
+    padding-left: 25%;
+}
+
+.buttons {
+    display: grid;
+    place-items: center;
+}
