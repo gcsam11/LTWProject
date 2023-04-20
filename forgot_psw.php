@@ -15,7 +15,7 @@
 
                 <p>Please enter your email address and we'll send you a link to reset your password.</p>
 
-                <input type="text" placeholder="Email" name="email" required>
+                <input type="email" placeholder="Email" required>
 
                 <div class="clearfix">
                     <button type="submit" class="submitbtn">Submit</button>

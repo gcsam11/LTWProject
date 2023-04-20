@@ -17,7 +17,7 @@ body {
 * {box-sizing: border-box}
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text], input[type=email], input[type=password] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -27,11 +27,17 @@ input[type=text], input[type=password] {
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
   border: none;
   box-shadow: none;
+}
+
+input[type=text]:focus:invalid, input[type=email]:focus:invalid, input[type=password]:focus:invalid {
+  box-shadow: red 0 0 10px 0;
+  border: 1px solid red;
+  animation: shake 0.2s;
 }
 
 input:invalid {

@@ -116,13 +116,19 @@ label {
 	margin-bottom: 5px;
 }
 
-select, input[type="date"], input[type="text"], textarea {
+select, input[type="date"], textarea {
 	padding: 10px;
 	border-radius: 5px;
 	border: 1px solid #d6d8db;
 	margin-bottom: 10px;
 	width: 100%;
 	box-sizing: border-box;
+	background-color: #f1f1f1;
+}
+
+select:focus , input[type="date"]:focus, textarea:focus {
+	outline: none;
+	background-color: #ddd;
 }
 
 textarea {

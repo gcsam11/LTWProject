@@ -19,7 +19,7 @@
                 <div class="box">
                     <input type="text" placeholder="Name" required>
                     <input type="text" placeholder="Username" required>
-                    <input type="text" placeholder="Email" required>
+                    <input type="email" placeholder="Email" required>
                     <input type="password" placeholder="Password" required>
                     <div class="clearfix">
                         <button type="submit" class="signupbtn">Sign Up</button> <!-- Este botão vai ter que estar dentro de um form para colocar os inputs na database e depois irá mandar o user para o login -->

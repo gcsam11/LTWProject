@@ -2,7 +2,7 @@
 // Database connection
 
 try{
-    $conn = new PDO("sqlite:".__DIR__."/db.sql");
+    $db = new PDO("sqlite:db.db");
 } 
 catch (PDOException $pe) {
     die ("Could not connect to the database :" . $pe->getMessage());

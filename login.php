@@ -1,9 +1,3 @@
-<?php
-    include_once('database/connection.php');
-    
-    $client_type = 'client';
-?>
-
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
@@ -14,13 +8,13 @@
         <link href="login.css" rel="stylesheet">
     </head>
     <body>
-        <form method = "get">
+        <form action = "database/loginCheck.php">
             <div class="container">
                 <h1>Login</h1>
                 <hr>
                 <div class="box">
-                    <input type="text" placeholder="Email or Username" required>
-                    <input type="password" placeholder="Password" required>
+                    <input type="text" placeholder="Email or Username" name="email" required>
+                    <input type="password" placeholder="Password" name="pass" required>
 
                     <div class="mid_row">
                         <div id="remember_me">
