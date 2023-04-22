@@ -1,6 +1,5 @@
 <?php 
-    include_once('database/checkSession.php');
-
+    include_once('../database/checkSession.php');
 ?>
 
 <!DOCTYPE html>
@@ -9,9 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Honour&display=swap" rel="stylesheet">
-	<title>My Tickets</title>
-	<link rel="stylesheet" href="my_tickets.css">
+	<title>All Tickets</title>
+	<link rel="stylesheet" href="../css/all_tickets.css">
 </head>
 <body>
     <header>
@@ -19,7 +17,7 @@
 			<a href="my_tickets.php">My Tickets</a>
 			<a href="all_tickets.php">All Tickets</a>
 			<a href="profile.php"><?php echo $profile ?></a>
-			<div class="animation start-my_tickets"></div>
+			<div class="animation start-all_tickets"></div>
 		</nav>
     </header>
 	<main>
@@ -28,12 +26,10 @@
 				<div class="box_content">
 					<label for="department-filter">Department:</label>
 			    	<select id="department" name="department" required>
-				    	<option value="accounting">Accounting</option>
-				    	<option value="hr">Human Resources</option>
-				    	<option value="management">Management</option>
-				    	<option value="sales">Sales</option>
-				    	<option value="marketing">Marketing</option>
-				    	<option value="it_support">IT Support</option>
+						<option value="none">---</option>
+
+				    	<?php /*include '../database/fetchDepartments.php';*/ ?>
+
 			    	</select>
 
 			    	<label for="date-filter">Date:</label>
@@ -73,14 +69,9 @@
 			</div>
 
 			<div class="box2">
-				<section id="right_box_content">
+				<section class="right_box_content">
 						<div id="tickets"><!-- php code--></div>
-						<div class="right_box_divs">
-							<form>
-								<button class="addbtn" onclick="location.href='create_tickets.php'" type="button">+</button>
-							</form>
-						</div>
-						<footer>Still have doubts? Check our <a href="faq.php">FAQ's</a>!</footer>
+						<footer>Still have doubts? Check our <a href="../pages/faq.php">FAQ's</a>!</footer>
 				</section>
 			</div>
 		</section>

@@ -1,11 +1,10 @@
 <?php 
     session_start();
-    if(!isset($_SESSION['username'])){
-        $profile = 'Profile';
-        //header('Location: index.php');
+    if(isset($_SESSION['username'])){
+        $profile = $_SESSION['username'];
     }
     else{
-        $profile = $_SESSION['username'];
+        header('Location:../index.php');
     }
 
 ?>

@@ -1,5 +1,5 @@
 <?php 
-    include_once('database/checkSession.php');
+    include_once('../database/checkSession.php');
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<title>Create Ticket</title>
-	<link rel="stylesheet" href="create_tickets.css">
+	<link rel="stylesheet" href="../css/create_tickets.css">
 </head>
 <body>
 	<header>
@@ -17,7 +17,7 @@
 		<hr>
 	</header>
 	<main>
-		<form>
+		<form action="">
 			<label for="subject">Subject:</label>
 			<input type="text" id="subject" name="subject" required>
 

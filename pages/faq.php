@@ -1,5 +1,5 @@
 <?php
-    include_once('database/checkSession.php');
+    include_once('../database/checkSession.php');
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<title>FAQ's</title>
-	<link rel="stylesheet" href="faq.css">
+	<link rel="stylesheet" href="../css/faq.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +19,7 @@
 </head>
 <body>
     <div class="header_div">
-        <a class="backbtn" href="my_tickets.php"> <- Back</a>
+        <a class="backbtn" href="../pages/my_tickets.php"> <- Back</a>
         <header>
             <h1>Frequently Asked Questions</h1>
             <hr>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="faqcode">
-            <!-- php code for faq table here (separate 2 loops for titles and answers) -->
+            <!-- php code for faq table here -->
         </div>
     </div>
 </body>

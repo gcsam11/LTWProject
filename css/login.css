@@ -126,11 +126,8 @@ hr {
   text-align: center;
 }
 
-.mid_row {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
+#forgot_psw {
+  text-align: right;
 }
 
 .container p {

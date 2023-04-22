@@ -1,5 +1,5 @@
 <?php 
-    include_once('database/checkSession.php');
+    include_once('../database/checkSession.php');
 ?>
 
 <!DOCTYPE html>
@@ -9,14 +9,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Profile</title>
-        <link href="profile.css" rel="stylesheet">
+        <link href="../css/profile.css" rel="stylesheet">
     </head>
     <body>
         <header>
             <nav>
-                <a href="my_tickets.php">My Tickets</a>
-                <a href="all_tickets.php">All Tickets</a>
-                <a href="profile.php"><?php echo $profile ?></a>
+                <a href="../pages/my_tickets.php">My Tickets</a>
+                <a href="../pages/all_tickets.php">All Tickets</a>
+                <a href="../pages/profile.php"><?php echo $profile ?></a>
                 <div class="animation start-profile"></div>
             </nav>
         </header>
@@ -52,7 +52,7 @@
                     </div>
                 </form>
 
-                <form name="logout" action="/logout.php" method="post">
+                <form name="logout" action="../pages/logout.php" method="post">
                     <div class="buttons">
                         <button type="submit" class="logoutbtn">Logout</button>
                     </div>

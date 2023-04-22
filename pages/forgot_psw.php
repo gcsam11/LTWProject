@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Forgot Password</title>
-        <link href="forgot_psw.css" rel="stylesheet">
+        <link href="../css/forgot_psw.css" rel="stylesheet">
     </head>
     <body>
-        <form action="/action_page.php">
+        <form action="">
             <div class="container">
                 <h1>Forgot Password</h1>
                 <hr>
@@ -20,7 +20,7 @@
                 <div class="clearfix">
                     <button type="submit" class="submitbtn">Submit</button>
                 </div>
-                <p id="back_to_login"><a href="login.php"> <- Back to Login</a></p>
+                <p id="back_to_login"><a href="../pages/login.php"> <- Back to Login</a></p>
             </div>
         </form>
         <footer>
