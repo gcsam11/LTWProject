@@ -29,6 +29,7 @@
         $verify = password_verify($plaintext_password, $hash);
     
         if($verify){
+            $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['name'] = $row['name'];
             $_SESSION['username'] = $row['username']; 
             $_SESSION['email'] = $row['email'];

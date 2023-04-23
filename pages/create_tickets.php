@@ -17,30 +17,24 @@
 		<hr>
 	</header>
 	<main>
-		<form action="">
+		<form action="../database/new_ticket.php" method = "post">
 			<label for="subject">Subject:</label>
 			<input type="text" id="subject" name="subject" required>
 
 			<label for="department">Department:</label>
-			<select id="department" name="department" required>
-				<option value="accounting">Accounting</option>
-				<option value="hr">Human Resources</option>
-				<option value="management">Management</option>
-				<option value="sales">Sales</option>
-				<option value="marketing">Marketing</option>
-				<option value="it_support">IT Support</option>
+			<select id="department" name="department">
+				<option value="0">---</option>
+				<option value="1">Accounting</option>
+				<option value="2">Human Resources</option>
+				<option value="3">Management</option>
+				<option value="4">Sales</option>
+				<option value="5">Marketing</option>
+				<option value="6">IT Support</option>
 			</select>
 
-			<label for="category">Category:</label>
-			<input type="text" id="category" list="categories" multiple>
-			<datalist id="categories">
-				<option value="Hardware">
-				<option value="Software">
-				<option value="Network">
-			</datalist>
-
 			<label for="priority">Priority:</label>
-			<select id="priority" name="priority" required>
+			<select id="priority" name="priority">
+				<option value="none">---</option>
 				<option value="low">Low</option>
 				<option value="medium">Medium</option>
 				<option value="high">High</option>

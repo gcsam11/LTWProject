@@ -197,13 +197,13 @@ textarea {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	width: 70px;
-	height: 70px;
+	width: 4.5rem;
+	height: 4.5rem;
 }
 
 .right_box_content footer {
 	position: absolute;
-	bottom: 0;
+	bottom: 1%;
 	left: 0;
 	width: 100%;
 }
@@ -230,9 +230,9 @@ textarea {
 	font-size: 55px;
 	font-weight: 600;
 	font-family: 'Inter', sans-serif;
-	line-height: 1px;
 	width: 4.5rem;
 	height: 4.5rem;
+	text-align: center;
 	border-radius: 50rem;
 	border: 3px solid var(--clr-neon);
 	outline: none;
@@ -243,8 +243,9 @@ textarea {
 	box-shadow: inset 0 0 0.25em 0 var(--clr-neon), 0 0 0.25em 0 var(--clr-neon);
 	cursor: pointer;
 	transition: opacity 100ms linear;
-	bottom: 1%;
-    position: fixed;
+	bottom: 0;
+	right: 0;
+    position: absolute;
 	text-decoration: none;
 }
 

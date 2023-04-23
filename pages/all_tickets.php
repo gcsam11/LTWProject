@@ -27,9 +27,7 @@
 					<label for="department-filter">Department:</label>
 			    	<select id="department" name="department" required>
 						<option value="none">---</option>
-
-				    	<?php /*include '../database/fetchDepartments.php';*/ ?>
-
+						<?php include '../database/fetchDepartments.php' ?>
 			    	</select>
 
 			    	<label for="date-filter">Date:</label>
@@ -38,9 +36,8 @@
 			    	<label for="agent-filter">Assigned Agent:</label>
 			    	<select id="agent-filter">
 				    	<option value="none">---</option>
-				    	<option value="jane">Jane Doe</option>
-				    	<option value="john">John Smith</option>
-				    	<option value="joe">Joe Bloggs</option>
+						<?php include '../database/fetchAgents.php' ?>
+
 			    	</select>
 
 			    	<label for="status-filter">Status:</label>
@@ -70,7 +67,11 @@
 
 			<div class="box2">
 				<section class="right_box_content">
-						<div id="tickets"><!-- php code--></div>
+						<div id="tickets">
+							<?php 
+								include '../database/get_tickets.php';
+							?>
+						</div>
 						<footer>Still have doubts? Check our <a href="../pages/faq.php">FAQ's</a>!</footer>
 				</section>
 			</div>

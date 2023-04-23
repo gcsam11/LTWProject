@@ -12,7 +12,6 @@
         $aux = true;
     }
     else{
-        echo '<script>alert("An account with this username/email already exists!")</script>';
         header('Location:../pages/sign_up.php');
         $aux = false;
     }
