@@ -17,7 +17,7 @@
 		<nav>
 			<a href="../pages/my_tickets.php">My Tickets</a>
 			<a href="../pages/all_tickets.php">All Tickets</a>
-			<a href="../pages/profile.php"><?php echo $profile ?></a>
+			<a href="../pages/profile_viewer.php"><?php echo $profile ?></a>
 			<div class="animation start-my_tickets"></div>
 		</nav>
     </header>
@@ -28,7 +28,7 @@
 					<label for="department-filter">Department:</label>
 			    	<select id="department" name="department" required>
 						<option value="none">---</option>
-						<?php include '../database/fetchDepartments.php' ?>
+						<?php include '../database/fetchDepartments.php'; ?>
 			    	</select>
 
 			    	<label for="date-filter">Date:</label>
@@ -37,7 +37,7 @@
 			    	<label for="agent-filter">Assigned Agent:</label>
 			    	<select id="agent-filter">
 				    	<option value="none">---</option>
-						<?php include '../database/fetchAgents.php' ?>
+						<?php include '../database/fetchAgents.php'; ?>
 
 			    	</select>
 

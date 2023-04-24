@@ -1,7 +1,7 @@
 <?php
     include 'connection.php';
 
-    $stmt = $db->prepare('SELECT * FROM User WHERE type = "agent"');
+    $stmt = $db->prepare('SELECT * FROM User WHERE type = "Agent"');
     $stmt->execute();
 
     while($row = $stmt->fetch()){

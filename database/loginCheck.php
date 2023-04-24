@@ -35,6 +35,11 @@
             $_SESSION['email'] = $row['email'];
             $_SESSION['gender'] = $row['gender']; 
             $_SESSION['type'] = $row['type']; 
+            
+            include 'getUserDepartment.php';
+
+            $_SESSION['department'] = $department;
+
             header('Location:../pages/my_tickets.php');
         }
         else{

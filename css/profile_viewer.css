@@ -1,5 +1,6 @@
 :root {
-    --clr-neon: #04AA6D;
+    --clr-neon_green: #04AA6D;
+    --clr-neon_red: #e90808;
     --clr-bg: #f8f9fa;
 }
   
@@ -47,10 +48,10 @@ nav .animation {
 	height: 5px;
 	bottom: 0;
 	z-index: 0;
-	background: var(--clr-neon);
+	background: var(--clr-neon_green);
 	border-radius: 8px;
 	transition: all .5s ease 0s;
-    box-shadow: 0 0 10px 0 var(--clr-neon);
+    box-shadow: 0 0 10px 0 var(--clr-neon_green);
 }
 
 nav a:nth-child(1) {
@@ -120,47 +121,12 @@ label{
     display: grid;
 }
 
-.savebtn {
-    background-color: var(--clr-bg);
-    color: var(--clr-neon);
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: 3px solid var(--clr-neon);
-    border-radius: 32px;
-    cursor: pointer;
-    opacity: 1;
-    text-align: center;
-    font-weight: 800;
-    font-size: large;
-    width: 25%;
-    transition: opacity 100ms linear;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.45em var(--clr-neon);
-    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-}
-  
-.savebtn:hover {
-    background-color: var(--clr-neon);
-    color: var(--clr-bg);
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: 3px solid var(--clr-neon);
-    border-radius: 32px;
-    cursor: pointer;
-    opacity: 1;
-    text-align: center;
-    font-weight: 800;
-    font-size: large;
-    width: 25%;
-    transition: opacity 100ms linear;
-    text-shadow: none;
-}
-
 .logoutbtn {
     background-color: var(--clr-bg);
-    color: var(--clr-neon);
+    color: var(--clr-neon_red);
     padding: 14px 20px;
     margin: 8px 0;
-    border: 3px solid var(--clr-neon);
+    border: 3px solid var(--clr-neon_red);
     border-radius: 32px;
     cursor: pointer;
     opacity: 1;
@@ -169,16 +135,16 @@ label{
     font-size: large;
     width: 25%;
     transition: opacity 100ms linear;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.45em var(--clr-neon);
-    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.45em var(--clr-neon_red);
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon_red), 0 0 0.5em 0 var(--clr-neon_red);
 }
   
 .logoutbtn:hover {
-    background-color: var(--clr-neon);
+    background-color: var(--clr-neon_red);
     color: var(--clr-bg);
     padding: 14px 20px;
     margin: 8px 0;
-    border: 3px solid var(--clr-neon);
+    border: 3px solid var(--clr-neon_red);
     border-radius: 32px;
     cursor: pointer;
     opacity: 1;
@@ -188,10 +154,6 @@ label{
     width: 25%;
     transition: opacity 100ms linear;
     text-shadow: none;
-}
-
-h2 {
-    text-align: center;
 }
 
 .labels {
@@ -212,4 +174,31 @@ h2 {
     border: 1px solid #d6d8db;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.box #edit {
+    text-align: right;
+    padding-right: 20px;
+}
+.box #edit a{
+    text-decoration: none;
+    color: var(--clr-neon_green);
+    font-weight: 700;
+}
+
+.labels strong {
+    font-weight: normal;
+}
+
+
+.divtype a{
+    text-decoration: none;
+    color: var(--clr-neon_green);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.divtype{
+    padding-bottom: 0;
+    margin-bottom: 0;
 }

@@ -10,7 +10,7 @@
         $stmt2 -> bindParam(':user_id', $row['user_id']);
         $stmt2 -> execute();
         $row2 = $stmt2 -> fetch();
-        echo '<span class="ticket_username"> By <a class="ticket_username_link" href="../pages/profileviewer.php?id=' .$row['user_id'] . '">' . $row2['username'] . '</a> on ' . $row['date'] . ' </span><br>';
+        echo '<span class="ticket_username"> By <a class="ticket_username_link" href="../pages/profile_viewer.php?id=' .$row['user_id'] . '">' . $row2['username'] . '</a> on ' . $row['date'] . ' </span><br>';
         echo '<span class="ticket_description">' . $row['description'] . '</span>';
     }
 ?>
