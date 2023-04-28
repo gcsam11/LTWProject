@@ -1,12 +1,12 @@
 <?php
-    if(!empty($row['department_id'])){
+    if(!empty($row3['department_id'])){
         $stmt2 = $db -> prepare('SELECT name FROM Department WHERE department_id = :department_id');
-        $stmt2 -> bindParam(':department_id', $row['department_id']);
+        $stmt2 -> bindParam(':department_id', $row3['department_id']);
         $stmt2 -> execute();
         $row2 = $stmt2 -> fetch();
-        $department = $row2['name'];
+        $ticketdepartment = $row2['name'];
     }
     else{
-        $department = 'Not Assigned';
+        $ticketdepartment = 'Not Assigned';
     }
 ?>

@@ -1,7 +1,8 @@
 <?php
     include 'connection.php';
 
-    $stmt = $db->prepare('SELECT * FROM User WHERE (type = "Agent" OR type = "Admin")');
+    $stmt = $db->prepare('SELECT * FROM User WHERE (type = "Agent" or type="Admin") AND department_id = :department_id');
+    $stmt->bindParam(':department_id', $row3['department_id']);
     $stmt->execute();
 
     while($row10 = $stmt->fetch()){

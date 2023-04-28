@@ -1,5 +1,5 @@
 <?php 
-    include_once('../database/checkSession.php');
+    include '../database/checkSession.php';
 ?>
 
 <!DOCTYPE html>

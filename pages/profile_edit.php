@@ -1,5 +1,5 @@
 <?php 
-    include_once('../database/checkSession.php');
+    include '../database/checkSession.php';
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +28,16 @@
 
                         <label for="psw">Password:</label>
                         <input type="password" placeholder="Password" name="psw"><br><br>
+
+                        <?php if($_SESSION['type'] == 'Admin') { 
+
+                            echo '<label for="dep_change">Department:</label>
+                            <select name="department" id="department">
+                                <option value="none">---</option>';
+                                include '../database/fetchDepartments.php';
+                            echo '<option value="not_assigned">Not Assigned</option>
+                            </select><br><br>';
+                        }; ?>
 
                         <label for="gender">Choose gender:</label>
 

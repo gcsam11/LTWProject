@@ -27,10 +27,27 @@
             $stmt->execute(array(':password' => $hash, ':user_id' => $_SESSION['user_id']));
         }
 
-        if(isset($_POST['gender']) && $_POST['gender'] != "None"){
+        if(isset($_POST['gender']) && $_POST['gender'] != 'None'){
             $stmt = $db->prepare('UPDATE USER SET gender = :gender WHERE user_id = :user_id');
             $stmt->execute(array(':gender' => $_POST['gender'], ':user_id' => $_SESSION['user_id']));
             $_SESSION['gender'] = $_POST['gender'];
+        }
+
+        if($_SESSION['type'] == 'Admin'){
+            if(isset($_POST['department']) && $_POST['department'] != 'not_assigned' && $_POST['department'] != 'none'){
+                $stmt = $db->prepare('UPDATE USER SET department_id = :department_id WHERE user_id = :user_id');
+                $stmt->execute(array(':department_id' => $_POST['department'], ':user_id' => $_SESSION['user_id']));
+
+                $stmt2 = $db->prepare('SELECT name FROM DEPARTMENT WHERE department_id = :department_id');
+                $stmt2->execute(array(':department_id' => $_POST['department']));
+                $row = $stmt2->fetch();
+                $_SESSION['department'] = $row['name'];
+            }
+            else if($_POST['department'] == 'not_assigned'){
+                $stmt = $db->prepare('UPDATE USER SET department_id = NULL WHERE user_id = :user_id');
+                $stmt->execute(array(':user_id' => $_SESSION['user_id']));
+                $_SESSION['department'] = 'Not Assigned';
+            }
         }
 
         header('Location: ../pages/profile_viewer.php?id='.$_SESSION['user_id']);

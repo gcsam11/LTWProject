@@ -1,5 +1,5 @@
 <?php 
-    include_once('../database/checkSession.php');
+    include '../database/checkSession.php';
 ?>
 
 <!DOCTYPE html>
@@ -24,20 +24,15 @@
 			<label for="department">Department:</label>
 			<select id="department" name="department">
 				<option value="0">---</option>
-				<option value="1">Accounting</option>
-				<option value="2">Human Resources</option>
-				<option value="3">Management</option>
-				<option value="4">Sales</option>
-				<option value="5">Marketing</option>
-				<option value="6">IT Support</option>
+				<?php include '../database/fetchDepartments.php'; ?>
 			</select>
 
 			<label for="priority">Priority:</label>
 			<select id="priority" name="priority">
 				<option value="none">---</option>
-				<option value="low">Low</option>
-				<option value="medium">Medium</option>
-				<option value="high">High</option>
+				<option value="Low">Low</option>
+				<option value="Medium">Medium</option>
+				<option value="High">High</option>
 			</select>
 
 			<label for="description">Description:</label>

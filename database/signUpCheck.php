@@ -3,7 +3,7 @@
 
     if(!empty($_POST)){
         if(isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['username']) && isset($_POST['name'])){
-            if(strlen($_POST['name']) < 255 && strlen($_POST['username']) < 8 && strlen($_POST['email']) < 255 && strlen($_POST['pass']) < 255){
+            if(strlen($_POST['name']) < 255 && strlen($_POST['username']) <= 8 && strlen($_POST['email']) < 255 && strlen($_POST['pass']) < 255){
                 $email = $_POST['email'];
                 $username = $_POST['username'];
                 $name = $_POST['name'];

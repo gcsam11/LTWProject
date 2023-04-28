@@ -3,7 +3,7 @@
     session_start();
 
     if(!empty($_POST)){
-        if((strlen($_POST['subject']) < 255 && isset($_POST['subject'])) && (strlen($_POST['description']) < 1000 && isset($_POST['description']))){
+        if((strlen($_POST['subject']) < 255 && isset($_POST['subject'])) && (strlen($_POST['description']) <= 1000 && isset($_POST['description']))){
             $subject = $_POST['subject'];
             $description = $_POST['description'];
             $user_id = $_SESSION['user_id'];

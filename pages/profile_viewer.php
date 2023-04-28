@@ -1,5 +1,5 @@
 <?php 
-    include_once('../database/checkSession.php');
+    include '../database/checkSession.php';
     
     include '../database/compareID.php';
 ?>
@@ -25,6 +25,7 @@
             <div class="box">
                 
                 <?php if($isUser){
+
                     echo '<p id="edit"><a href="profile_edit.php?id=' . $_SESSION['user_id'] . '">Edit</a></p>';
 
                     echo '<form name="change" method="post">
@@ -57,6 +58,7 @@
                     </form>';
                 } 
                 else{
+                    $userid = $_GET['id'];
                     include '../database/fetchUser.php';
 
                     echo '<br><form name="change" method="post">
@@ -76,21 +78,21 @@
                     if($_SESSION['type'] == 'Admin'){
                         switch($row['type']){
                             case 'Client':
-                                echo '<div class="divtype"><label for="type">Type: <strong>' . $row['type'] . '</strong></label><br>';
-                                echo '<a href="../database/typeChanger.php?id=' . $_GET['id'] . '&type=Agent"> Promote </a></div>';
-                                echo '<br>';
+                                echo '<div class="divtype"><label for="type">Type: <strong>' . $row['type'] . '</strong></label><br><br>';
+                                echo '<a class="promote" href="../database/typeChanger.php?id=' . $_GET['id'] . '&type=Agent">Promote</a></div>';
+                                echo '<br><br>';
                                 break;
 
                             case 'Agent':
-                                echo '<div class="divtype"><label for="type">Type: <strong>' . $row['type'] . '</strong></label><br>';
-                                echo '<a href="../database/typeChanger.php?id=' . $_GET['id'] . '&type=Admin"> Promote </a> <a href="../database/typeChanger.php?id=' . $_GET['id'] . '&type=Client"> Demote </a></div>';
-                                echo '<br>';
+                                echo '<div class="divtype"><label for="type">Type: <strong>' . $row['type'] . '</strong></label><br><br>';
+                                echo '<a class="promote" href="../database/typeChanger.php?id=' . $_GET['id'] . '&type=Admin">Promote</a><a class="demote" href="../database/typeChanger.php?id=' . $_GET['id'] . '&type=Client">Demote</a></div>';
+                                echo '<br><br>';
                                 break;
 
                             case 'Admin':
-                                echo '<div class="divtype"><label for="type">Type: <strong>' . $row['type'] . '</strong></label><br>';
-                                echo '<a href="../database/typeChanger.php?id=' . $_GET['id'] . '&type=Agent"> Demote </a></div>';
-                                echo '<br>';    
+                                echo '<div class="divtype"><label for="type">Type: <strong>' . $row['type'] . '</strong></label><br><br>';
+                                echo '<a class="demote" href="../database/typeChanger.php?id=' . $_GET['id'] . '&type=Agent">Demote</a></div>';
+                                echo '<br><br>';    
                                 break;
                             default:
                                 break;
