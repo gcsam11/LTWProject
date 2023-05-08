@@ -124,6 +124,13 @@
                     <?php echo $row3['description'] ?>
                 </div>
             </div>
+
+            <?php 
+                if($_SESSION['type'] != 'Client'){
+                    echo '<br><br><a class="ticketchanges" href="../pages/changes_list.php?id=' . $ticketid . '">Changes List</a>';
+                }
+            ?>
+
         </div>
 
         <!-- Ticket Comments -->

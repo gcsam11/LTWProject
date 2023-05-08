@@ -14,7 +14,7 @@
                 <hr>
                 <div class="box">
                     <input type="text" placeholder="Name" name="name" required>
-                    <input type="text" placeholder="Username" name="username" required>
+                    <input type="text" placeholder="Username (less than 8 characters)" name="username" required>
                     <input type="email" placeholder="Email" name="email" required>
                     <input type="password" placeholder="Password" name="pass" required>
                     <div class="clearfix">

@@ -12,10 +12,13 @@
 	<link rel="stylesheet" href="../css/create_tickets.css">
 </head>
 <body>
-	<header>
-		<h1>Create a new Ticket</h1>
-		<hr>
-	</header>
+	<div class="header_div">
+        <a id="backbtn" href="../pages/my_tickets.php"> <- Back</a>
+        <header>
+            <h1>Create Ticket</h1>
+            <hr>
+        </header>
+    </div>
 	<main>
 		<form action="../database/new_ticket.php" method = "post">
 			<label for="subject">Subject:</label>

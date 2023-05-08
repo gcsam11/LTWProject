@@ -29,7 +29,7 @@
     <div class="faq">
         <div class="wrapper">
             <div class="search">
-                <span class="uil uil-search"></span>
+                <span class="uil-search"></span>
                 <input placeholder="Search" type="text" />
             </div>
         </div>

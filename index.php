@@ -14,9 +14,9 @@
                 <hr>
                 <div class="box">
                    
-                    <button class = "loginbtn" onclick="location.href='../pages/login.php'" type="button">Login</button>  <!-- Trocar para script de JS -->
+                    <button class = "loginbtn" onclick="location.href='../pages/login.php'" type="button">Login</button>  <?//JavaScript?>
 
-                    <button class = "signupbtn" onclick="location.href='../pages/sign_up.php'" type="button">Sign Up</button> <!-- Trocar para script de JS -->
+                    <button class = "signupbtn" onclick="location.href='../pages/sign_up.php'" type="button">Sign Up</button> <?//JavaScript?>
 
                 </div>
             </div>

@@ -53,6 +53,14 @@
                 $stmt->execute();
             }
 
+
+            $ticket_id = $db->lastInsertId();
+            $stmt = $db->prepare('INSERT INTO TICKET_CHANGES (ticket_id, user_id, date, type) VALUES (:ticket_id, :user_id, :date, "Ticket Creation")');
+            $stmt->bindParam(':ticket_id', $ticket_id);
+            $stmt->bindParam(':user_id', $user_id);
+            $stmt->bindParam(':date', $date);
+            $stmt->execute();
+
             header('Location:../pages/my_tickets.php');
         }
         else{

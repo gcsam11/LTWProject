@@ -23,10 +23,15 @@
             </nav>
         </header>
             <div class="box">
-                
                 <?php if($isUser){
+                    echo '<div class="editarea">';
+                    echo '<span id="edit"><a href="profile_edit.php?id=' . $_SESSION['user_id'] . '">Edit</a></span>';
 
-                    echo '<p id="edit"><a href="profile_edit.php?id=' . $_SESSION['user_id'] . '">Edit</a></p>';
+                    if($_SESSION['type'] == 'Admin'){
+                        echo '<span><a class="system" href="system.php">System</a></span>';
+                    }
+
+                    echo '</div>';
 
                     echo '<form name="change" method="post">
                     <div class="labels">

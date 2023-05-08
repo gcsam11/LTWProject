@@ -28,7 +28,9 @@
 					<label for="department-filter">Department:</label>
 			    	<select id="department" name="department" required>
 						<option value="none">---</option>
+
 						<?php include '../database/fetchDepartments.php'; ?>
+						
 			    	</select>
 
 			    	<label for="date-filter">Date:</label>
@@ -37,7 +39,11 @@
 			    	<label for="agent-filter">Assigned Agent:</label>
 			    	<select id="agent-filter">
 				    	<option value="none">---</option>
-						<?php include '../database/fetchAgents.php'; ?>
+
+						<?php 
+						$isTicket = false;
+						include '../database/fetchAgents.php'; 
+						?>
 
 			    	</select>
 
@@ -69,10 +75,18 @@
 			<div class="box2">
 				<section class="right_box_content">
 						<div id="tickets">
+
 							<?php include '../database/get_my_tickets.php'; ?>
+
 						</div>
 						<div class="right_box_btn">
-							<a href="../pages/create_tickets.php" class="addbtn">+</a>
+							<input type="button" id="addbtn" value="+"/>
+							<script>
+								document.getElementById("addbtn")
+									.addEventListener('click', () => {
+										window.location.replace("../pages/create_tickets.php");
+									});
+							</script>
 						</div>
 						<footer>Still have doubts? Check our <a href="../pages/faq.php">FAQ's</a>!</footer>
 				</section>

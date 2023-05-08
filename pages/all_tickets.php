@@ -36,7 +36,10 @@
 			    	<label for="agent-filter">Assigned Agent:</label>
 			    	<select id="agent-filter">
 				    	<option value="none">---</option>
-						<?php include '../database/fetchAgents.php' ?>
+						<?php 
+						$isTicket = false;
+						include '../database/fetchAgents.php'
+						 ?>
 
 			    	</select>
 
