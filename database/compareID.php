@@ -4,7 +4,7 @@
         $isUser = true;
     }
     else{
-        if($_GET['id'] == $_SESSION['user_id']){
+        if(is_numeric($_GET['id']) && ($_GET['id'] == $_SESSION['user_id'])){
             $isUser = true;
         }
     }

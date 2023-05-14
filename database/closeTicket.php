@@ -1,5 +1,11 @@
 <?php
-    $ticketid2 = $_GET['id'];
+    if(is_numeric($_GET['id'])){
+        $ticketid2 = $_GET['id'];
+    }
+    else{
+        header('Location:../pages/my_tickets.php');
+    }
+    
     $date = date("Y-m-d");
     session_start();
     include 'connection.php';

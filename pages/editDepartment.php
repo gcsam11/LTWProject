@@ -27,6 +27,8 @@
 
             <div class="addDep">
                 <form action="../database/newDepartment.php" method="post">
+                    <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']; ?>">
+
                     <input type="text" name="department" placeholder="Department Name" required>
                     <button type="submit" id="addDepbtn">Add</button>
                 </form> 
@@ -34,6 +36,8 @@
 
             <div class="removeDep">
                 <form action="../database/removeDepartment.php" method="post">
+                    <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']; ?>">
+                    
                     <select id="department" name="department">
                         <option value="none">---</option>
                         <?php include '../database/fetchDepartments.php' ?>

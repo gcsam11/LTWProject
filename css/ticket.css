@@ -266,3 +266,13 @@ select:focus {
     box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
     border-radius: 0.25em;
 }
+
+.changes_history {
+    text-align: center;
+}
+.ticketchanges {
+    text-decoration: none;
+    color: var(--clr-neon_green);
+    font-weight: 700;
+    font-size: large;
+}

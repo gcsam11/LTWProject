@@ -21,6 +21,8 @@
     </div>
 	<main>
 		<form action="../database/new_ticket.php" method = "post">
+			<input type="hidden" name="csrf" value="<?=$_SESSION['csrf']; ?>">
+			
 			<label for="subject">Subject:</label>
 			<input type="text" id="subject" name="subject" required>
 

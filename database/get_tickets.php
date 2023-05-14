@@ -22,10 +22,12 @@
             echo '<div class ="btns">';
 
             echo '<form class ="editbtnform" action="../pages/editTicket.php?id='.$row['ticket_id'].'" method="POST">
+            <input type="hidden" name="csrf" value="' . $_SESSION['csrf'] . '">
             <input type="hidden" name="site" value="alltickets">
             <button type="submit" id="edit_btn"> Edit </button> </form>';
 
             echo '<form class="deletebtnform" action="../database/deleteTicket.php" method="POST"> 
+            <input type="hidden" name="csrf" value="' . $_SESSION['csrf'] . '">
             <input type="hidden" name="site" value="alltickets">
             <input type="hidden" name="id" value=' . $row['ticket_id'] .'>
             <button type="submit" id="delete_btn"> Delete </button> </form></div>';

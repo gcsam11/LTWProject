@@ -1,7 +1,11 @@
 <?php 
     include '../database/checkSession.php';
 
-    if(!empty($_GET['id'])){
+    if($_SESSION['csrf'] !== $_POST['csrf']){
+        header('Location:../pages/my_tickets.php');
+    }
+
+    if(!empty($_GET['id']) && is_numeric($_GET['id'])){
         include '../database/connection.php';
         $stmt = $db->prepare('SELECT * FROM Ticket WHERE ticket_id = :ticket_id');
         $stmt->bindParam(':ticket_id', $_GET['id']);
@@ -26,7 +30,8 @@
     <body>
         <h1>Only the non-empty fields will be saved</h1>
             <div class="box">
-                <form name="change" action=<?php echo '../database/ticket_changer.php?id='.$_GET['id'].'&user='.$_SESSION['user_id'].''; ?> method="post">
+                <form name="change" action=<?php echo '../database/ticket_changer.php?id='.$_GET['id'].''; ?> method="post">
+                    <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']; ?>">
                 
                     <div class="labels">
                         <label for="name">Title:</label>

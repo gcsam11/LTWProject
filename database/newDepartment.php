@@ -1,5 +1,10 @@
 <?php
     include 'connection.php';
+    session_start();
+    if($_SESSION['csrf'] !== $_POST['csrf']){
+        header('Location:../pages/my_tickets.php');
+    }
+
     $exists = true;
     if(!empty($_POST['department'])){
         $stmt = $db -> prepare('SELECT name FROM DEPARTMENT');

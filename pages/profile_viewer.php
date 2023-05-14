@@ -33,8 +33,7 @@
 
                     echo '</div>';
 
-                    echo '<form name="change" method="post">
-                    <div class="labels">
+                    echo '<div class="labels">
                         <label for="username">Username: <strong>' . $_SESSION['username'] . '</strong></label>
                         <br><br>
 
@@ -53,20 +52,26 @@
                         <label for="department">Department: <strong>' . $_SESSION['department'] . '</strong></label>
                         <br><br>
                     </div>
-                </form>
 
             
-                    <form name="logout" action="../pages/logout.php" method="post">
+                    <form name="logout" action="../database/logout.php" method="post">
+                        <input type="hidden" name="csrf" value="' . $_SESSION['csrf'] . '">
                         <div class="buttons">
                             <button type="submit" class="logoutbtn">Logout</button>
                         </div>
                     </form>';
                 } 
                 else{
-                    $userid = $_GET['id'];
+                    if(is_numeric($_GET['id'])){
+                        $userid = $_GET['id'];
+                    }
+                    else{
+                        header('Location:../pages/my_tickets.php');
+                    }
+                    
                     include '../database/fetchUser.php';
 
-                    echo '<br><form name="change" method="post">
+                    echo '<br>
                     <div class="labels">
                         <label for="username">Username: <strong>' . $row['username'] . '</strong></label>
                         <br><br>
@@ -110,8 +115,7 @@
 
                     echo '<label for="department">Department: <strong>' . $department . '</strong></label>
                         <br><br>
-                    </div>
-                </form>';
+                    </div>';
                 }
                 ?>
             </div>

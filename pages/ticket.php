@@ -2,6 +2,9 @@
     include '../database/checkSession.php';
     include '../database/fetchTicket.php';
 
+    if(!is_numeric($_GET['id'])){
+        header('Location:../pages/all_tickets.php');
+    }
     $ticketid = $_GET['id'];
     $userid = $row3['user_id'];
     $status = $row3['status'];
@@ -44,7 +47,9 @@
 
                         if(($_SESSION['type'] != 'Client') && ($status != 'Closed')){
 
-                            echo '<form action="../database/alterTicketDepartment.php?id=' . $ticketid . '" method="post">';
+                            echo '<form action="../database/alterTicketDepartment.php?id=' . $ticketid . '" method="post">
+                            <input type="hidden" name="csrf" value="' . $_SESSION['csrf'] . '">';
+                            
                             echo '<select id="department" name="department">
 						    <option value="none">---</option>';
 
@@ -76,7 +81,9 @@
                             if(($_SESSION['type'] != 'Client') && ($status != 'Closed')){
                                 if($ticketdepartment == 'Not Assigned'){
 
-                                    echo '<form action="../database/alterAssignedAgent.php?id=' . $ticketid . '" method="post">';
+                                    echo '<form action="../database/alterAssignedAgent.php?id=' . $ticketid . '" method="post">
+                                    <input type="hidden" name="csrf" value="' . $_SESSION['csrf'] . '">';
+
                                     echo '<select id="agent" name="agent">
                                     <option value="none">---</option>';
 
@@ -90,6 +97,7 @@
                                 else{
 
                                     echo '<form action="../database/alterAssignedAgent.php?id=' . $ticketid . '" method="post">';
+                                    echo '<input type="hidden" name="csrf" value="' . $_SESSION['csrf'] . '">';
                                     echo '<select id="agent" name="agent">
                                     <option value="none">---</option>';
 
@@ -114,7 +122,7 @@
                     ?>
         
                     <br>
-                    <div class="priority"> Priority: <?php echo $row3['priority'] ?></div>
+                    <div class="priority">Priority: <?php echo $row3['priority'] ?></div>
                 </div>
             </div>
 
@@ -127,7 +135,7 @@
 
             <?php 
                 if($_SESSION['type'] != 'Client'){
-                    echo '<br><br><a class="ticketchanges" href="../pages/changes_list.php?id=' . $ticketid . '">Changes List</a>';
+                    echo '<br><br><p class="changes_history"><a class="ticketchanges" href="../pages/changes_list.php?id=' . $ticketid . '">Changes History</a></p>';
                 }
             ?>
 

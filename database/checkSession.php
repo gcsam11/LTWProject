@@ -1,4 +1,8 @@
 <?php 
+    function generate_random_token(){
+        return bin2hex(openssl_random_pseudo_bytes(32));
+    }
+
     include 'connection.php';
     session_start();
 
@@ -6,8 +10,11 @@
         header('Location:../index.php');
     }
 
+    if(!isset($_SESSION['csrf'])){
+        $_SESSION['csrf'] = generate_random_token();
+    }
 
-    $userid=$_SESSION['user_id'];
+    $userid = $_SESSION['user_id'];
     include 'fetchUser.php';
     
     if($row['user_id'] != $_SESSION['user_id']){$_SESSION['user_id'] = $row['user_id'];}

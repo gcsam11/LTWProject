@@ -1,5 +1,9 @@
 <?php 
     include 'connection.php';
+    session_start();
+    if($_SESSION['csrf'] !== $_POST['csrf']){
+        header('Location:../pages/my_tickets.php');
+    }
 
     if(!empty($_POST['department']) && ($_POST['department'] != 'none')){
 

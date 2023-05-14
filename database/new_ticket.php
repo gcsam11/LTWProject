@@ -2,6 +2,10 @@
     include 'connection.php';
     session_start();
 
+    if($_SESSION['csrf'] !== $_POST['csrf']){
+        header('Location:../pages/my_tickets.php');
+    }
+
     if(!empty($_POST)){
         if((strlen($_POST['subject']) < 255 && isset($_POST['subject'])) && (strlen($_POST['description']) <= 1000 && isset($_POST['description']))){
             $subject = $_POST['subject'];

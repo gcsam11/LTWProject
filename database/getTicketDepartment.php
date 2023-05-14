@@ -1,5 +1,5 @@
 <?php
-    if(!empty($row3['department_id'])){
+    if(!empty($row3['department_id']) && is_numeric($row3['department_id'])){
         $stmt2 = $db -> prepare('SELECT name FROM Department WHERE department_id = :department_id');
         $stmt2 -> bindParam(':department_id', $row3['department_id']);
         $stmt2 -> execute();

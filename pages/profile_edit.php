@@ -15,6 +15,7 @@
         <h1>Only the non-empty fields will be saved</h1>
             <div class="box">
                 <form name="change" action=<?php echo '../database/profile_changer.php?id='. $_SESSION['user_id']; ?> method="post">
+                    <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']; ?>">
                 
                     <div class="labels">
                         <label for="name">Name:</label>

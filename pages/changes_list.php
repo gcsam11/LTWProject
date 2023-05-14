@@ -1,7 +1,7 @@
 <?php
     include '../database/checkSession.php';
 
-    if(empty($_GET['id'])){
+    if(empty($_GET['id']) || !is_numeric($_GET['id'])){
         header('Location:../pages/my_tickets.php');
     }
 ?>
@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<title>Changes List</title>
+	<title>Changes History</title>
 	<link rel="stylesheet" href="../css/changes_list.css">
 </head>
     <body>
@@ -43,8 +43,8 @@
 
                         echo '<tr>
                         <td><a id="username" href="../pages/profile_viewer.php?id='.$row20['user_id'].'">'.$row20['username'].'</a></td>
-                        <td>'.$row12['type'].'</td>
-                        <td>'.$row12['date'].'</td>
+                        <td id="type">'.$row12['type'].'</td>
+                        <td id="date">'.$row12['date'].'</td>
                         </tr>';
                     }
                 ?>
