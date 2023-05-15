@@ -27,15 +27,29 @@
     </div>
     
     <div class="faq">
-        <div class="wrapper">
+        <!--<div class="wrapper">
             <div class="search">
                 <span class="uil-search"></span>
                 <input placeholder="Search" type="text" />
             </div>
-        </div>
+        </div>-->
         <div class="faqcode">
-            <!-- php code for faq table here -->
+            <?php include '../database/getFAQ.php'; ?>
         </div>
+
+
+
+        <?php if($_SESSION['type'] = 'Admin'){
+            echo '<div class="right_box_btn">
+            <input type="button" id="addbtn" value="+"/>
+            <script>
+                document.getElementById("addbtn")
+                    .addEventListener("click", () => {
+                        window.location.replace("../pages/new_faq.php");
+                    });
+                </script>
+            </div>';
+        }?>
     </div>
 </body>
 </html>

@@ -21,6 +21,7 @@
 		</nav>
     </header>
 	<main>
+		<form action="../database/filter.php" method="post">
 		<section id="grid">
 			<div class="box">
 				<div class="box_content">
@@ -31,10 +32,10 @@
 			    	</select>
 
 			    	<label for="date-filter">Date:</label>
-			    	<input type="date" id="date-filter">
+			    	<input type="date" id="date-filter" name="date">
 
 			    	<label for="agent-filter">Assigned Agent:</label>
-			    	<select id="agent-filter">
+			    	<select id="agent-filter" name="agent">
 				    	<option value="none">---</option>
 						<?php 
 						$isTicket = false;
@@ -44,29 +45,27 @@
 			    	</select>
 
 			    	<label for="status-filter">Status:</label>
-			    	<select id="status-filter">
+			    	<select id="status-filter" name="status">
                     	<option value="none">---</option>
-				    	<option value="assigned">Assigned</option>
-				    	<option value="open">Open</option>
-				    	<option value="closed">Closed</option>
+				    	<option value="Assigned">Assigned</option>
+				    	<option value="Open">Open</option>
+				    	<option value="Closed">Closed</option>
 			    	</select>
 
 			    	<label for="priority-filter">Priority:</label>
 			    	<select id="priority-filter">
 				    	<option value="none">---</option>
-                    	<option value="low">Low</option>
-				    	<option value="medium">Medium</option>
-				    	<option value="high">High</option>
+                    	<option value="Low">Low</option>
+				    	<option value="Medium">Medium</option>
+				    	<option value="High">High</option>
 			    	</select>
-
-			    	<label for="category-filter">Category:</label>
-					<textarea id="category-filter" name="category-filter"></textarea>
 
                 	<div class="clearfix">
 				    	<button type="submit" class="filterbtn">Filter</button>
 			    	</div>
 				</div>
 			</div>
+		</form>
 
 			<div class="box2">
 				<section class="right_box_content">

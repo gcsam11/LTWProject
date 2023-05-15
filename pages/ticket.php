@@ -5,6 +5,7 @@
     if(!is_numeric($_GET['id'])){
         header('Location:../pages/all_tickets.php');
     }
+
     $ticketid = $_GET['id'];
     $userid = $row3['user_id'];
     $status = $row3['status'];
@@ -141,6 +142,23 @@
 
         </div>
 
-        <!-- Ticket Comments -->
+        <div class="comments">
+            <?php
+                include '../database/getTicketComments.php';
+            ?>
+        </div><br>
+
+        <?php 
+            if((($row3['assigned_agent'] == $_SESSION['user_id']) || ($userid = $_SESSION['user_id']) || ($_SESSION['type'] == 'Admin')) && $status != 'Closed'){
+                echo '<form class="commentbox" action="../database/insertTicketComment.php?id='.$ticketid.'" method="post">
+                    <input type="hidden" name="csrf" value="'.$_SESSION['csrf'].'">
+
+                    <textarea class="comment" name="comment" placeholder="Write a comment..."></textarea><br>
+                    <button type="submit" class="submitcommentbtn">Submit</button></form>
+                </form>';
+
+                echo 
+            }
+        ?>
     </body>
 </html>

@@ -63,9 +63,6 @@
 				    	<option value="high">High</option>
 			    	</select>
 
-			    	<label for="category-filter">Category:</label>
-					<textarea id="category-filter" name="category-filter"></textarea>
-
                 	<div class="clearfix">
 				    	<button type="submit" class="filterbtn">Filter</button>
 			    	</div>
