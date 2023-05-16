@@ -35,10 +35,10 @@
                 
                     <div class="labels">
                         <label for="name">Title:</label>
-                        <input type="text" placeholder="<?php echo $row55['title'] ?>" name="name"><br><br>
+                        <input type="text" placeholder="<?php echo $row55['title']; ?>" name="name"><br><br>
 
                         <label for="description">Description:</label>
-                        <input type="text" placeholder="" name="description"><br><br>
+                        <textarea placeholder="<?php echo $row55['description']; ?>" name="description"></textarea><br><br>
 
                         <label for="priority">Priority:</label>
                         <select id="priority" name="priority">
@@ -48,6 +48,8 @@
                             <option value="High">High</option>
                         </select><br><br>
                         
+                        <label for="hashtag">Hashtag:</label>
+                        <input type="text" placeholder="<?php echo $row55['hashtag']; ?>" name="hashtag">
                     </div>
                     <div class="buttons">
                         <button type="submit" class="savebtn">Save</button>

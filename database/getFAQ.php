@@ -6,7 +6,7 @@
 
     while($result = $stmt -> fetch()){
         echo '<h2 class="question">'.$result['question'].'</h2>';
-        echo '<span class="answer">'.$result['answer'].'</span>';
+        echo '<div class="answer"><span >'.$result['answer'].'</span></div>';
     }
 
 ?>

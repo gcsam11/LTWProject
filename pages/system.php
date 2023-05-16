@@ -21,19 +21,9 @@
         </div>
         <div class="content">
             <input type="button" id="editDep" value="Edit Departments"/>
-            <script>
-                document.getElementById("editDep")
-                    .addEventListener('click', () => {
-                        window.location.replace("../pages/editDepartment.php");
-                    });
-            </script>
+            <script src="../javascript/edit_dep.js"></script>
             <input type="button" id="userlist" value="User List"/>
-            <script>
-                document.getElementById("userlist")
-                    .addEventListener('click', () => {
-                        window.location.replace("../pages/userlist.php");
-                    });
-            </script>
+            <script src="../javascript/userlist.js"></script>
         </div>
     </body>
 </html>

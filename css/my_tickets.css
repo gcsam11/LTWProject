@@ -104,12 +104,11 @@ section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 20px;
+	padding: 0px 20px;
     border: 1px solid #d6d8db;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 	grid-column: 1/2;
-
 }
 
 label {
@@ -137,22 +136,20 @@ textarea {
 }
 
 .clearfix {
-	display: grid;
-	place-items: center;
-	font-family: 'Inter', sans-serif;
-	color: var(--clr-neon_green);
+	display: flex;
+	justify-content: center;
 }
 
 .filterbtn {
 	background-color: var(--clr-bg);
 	color: var(--clr-neon_green);
-	padding: 14px 20px;
-	margin: 8px 0;
+	padding: 5px 10px;
 	border: 3px solid var(--clr-neon_green);
 	border-radius: 32px;
 	cursor: pointer;
 	opacity: 1;
 	text-align: center;
+	font-family: 'Inter', sans-serif;
 	font-weight: 800;
 	font-size: large;
 	width: 70%;
@@ -164,15 +161,11 @@ textarea {
 .filterbtn:hover {
 	background-color: var(--clr-neon_green);
 	color: var(--clr-bg);
-	padding: 14px 20px;
-	margin: 8px 0;
+	padding: 5px 10px;
 	border: 3px solid var(--clr-neon_green);
 	border-radius: 32px;
 	cursor: pointer;
 	opacity: 1;
-	text-align: center;
-	font-weight: 800;
-	font-size: large;
 	width: 70%;
 	transition: opacity 100ms linear;
 	text-shadow: none;
@@ -280,7 +273,6 @@ h2:first-of-type {
     border-radius: 0px 0px 10px 10px;
     padding: 5px;
 }
-
 .ticket:last-of-type {
     margin-bottom: 10px;
 }

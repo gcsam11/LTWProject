@@ -259,6 +259,21 @@ select:focus {
     transition: opacity 100ms linear;
 }
 
+.hashtag_container {
+    display: flex;
+    justify-content: center;
+    cursor: default;
+}
+#hashtag {
+    border: solid 1px var(--clr-neon_green);
+    border-radius: 32px;
+    padding: 5px 10px;
+    background-color: var(--clr-neon_green);
+    box-shadow: 0 0 0.25em 0 var(--clr-neon_green);
+    color: white;
+    font-weight: 700;
+}
+
 .ticket_description {
     text-align: center;
     padding: 20px;
@@ -275,4 +290,92 @@ select:focus {
     color: var(--clr-neon_green);
     font-weight: 700;
     font-size: large;
+}
+
+.comments {
+    margin: 10px 10px 0px 0px;
+    max-height: 35vh;
+    overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.ticket_comments {
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    background-color: var(--clr-bg);
+    border: transparent;
+    border-radius: 12px;
+    padding: 5px;
+}
+.ticket_comments:last-of-type {
+    margin-bottom: 0;
+}
+
+.ticket_comment_username_and_date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticket_comment_username {
+    text-decoration: none;
+    color: var(--clr-neon_green)
+}
+
+.commentbox {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.comment {
+    width: 90%;
+    resize: vertical;
+    padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #d6d8db;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	background-color: #f1f1f1;
+}
+
+.comment:focus {
+	outline: none;
+	background-color: #ddd;
+}
+
+#sub_comment_btn {
+    display: flex;
+    align-items: end;
+    margin-bottom: 10px;
+}
+
+#submitcommentbtn {
+    text-decoration: none;
+    color: var(--clr-neon_green);
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: medium;
+    border: 1px solid var(--clr-neon_green);
+    border-radius: 32px;
+    background-color: white;
+    padding: 5px 15px;
+    text-shadow: 0 0 0.0625em hsl(0 0% 100% / 0.5), 0 0 0.225em var(--clr-neon_green);
+    box-shadow: inset 0 0 0.25em 0 var(--clr-neon_green), 0 0 0.25em 0 var(--clr-neon_green);
+    transition: opacity 100ms linear;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+#submitcommentbtn:hover {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: medium;
+    border: 1px solid var(--clr-neon_green);
+    border-radius: 32px;
+    background-color: var(--clr-neon_green);
+    padding: 5px 15px;
+    text-shadow: none;
+    transition: opacity 100ms linear;
 }

@@ -25,14 +25,21 @@
 		<section id="grid">
 			<div class="box">
 				<div class="box_content">
+				<input type="hidden" name="csrf" value="<?=$_SESSION['csrf']; ?>">
+				<input type="hidden" name="site" value="all_tickets">
+
 					<label for="department-filter">Department:</label>
-			    	<select id="department" name="department" required>
+			    	<select id="department" name="department">
 						<option value="none">---</option>
 						<?php include '../database/fetchDepartments.php' ?>
 			    	</select>
 
 			    	<label for="date-filter">Date:</label>
-			    	<input type="date" id="date-filter" name="date">
+			    	<select id="date-filter" name="date">
+						<option value="none">---</option>	
+						<option value="newest">Newest</option>
+						<option value="oldest">Oldest</option>
+					</select>	
 
 			    	<label for="agent-filter">Assigned Agent:</label>
 			    	<select id="agent-filter" name="agent">
@@ -41,7 +48,6 @@
 						$isTicket = false;
 						include '../database/fetchAgents.php'
 						 ?>
-
 			    	</select>
 
 			    	<label for="status-filter">Status:</label>
@@ -53,12 +59,15 @@
 			    	</select>
 
 			    	<label for="priority-filter">Priority:</label>
-			    	<select id="priority-filter">
+			    	<select id="priority-filter" name="priority">
 				    	<option value="none">---</option>
                     	<option value="Low">Low</option>
 				    	<option value="Medium">Medium</option>
 				    	<option value="High">High</option>
 			    	</select>
+
+					<label for="hashtag-filter">Hashtag:</label>
+					<textarea autocomplete="on" class="hashtag-filter-textarea" name="hashtag" placeholder=""></textarea>
 
                 	<div class="clearfix">
 				    	<button type="submit" class="filterbtn">Filter</button>
@@ -71,7 +80,14 @@
 				<section class="right_box_content">
 						<div id="tickets">
 							<?php 
-								include '../database/get_tickets.php';
+								if($_SESSION['filter']){
+									$site = 'all_tickets';
+									include '../database/get_filter_content.php';
+									$_SESSION['filter'] = false;
+								}
+								else{
+									include '../database/get_tickets.php';
+								}
 							?>
 						</div>
 						<footer>Still have doubts? Check our <a href="../pages/faq.php">FAQ's</a>!</footer>

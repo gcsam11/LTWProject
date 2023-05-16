@@ -27,29 +27,20 @@
     </div>
     
     <div class="faq">
-        <!--<div class="wrapper">
-            <div class="search">
-                <span class="uil-search"></span>
-                <input placeholder="Search" type="text" />
+        <section class="faq_content">
+            <div class="faqcode">
+                <?php include '../database/getFAQ.php'; ?>
             </div>
-        </div>-->
-        <div class="faqcode">
-            <?php include '../database/getFAQ.php'; ?>
-        </div>
 
 
 
-        <?php if($_SESSION['type'] = 'Admin'){
-            echo '<div class="right_box_btn">
-            <input type="button" id="addbtn" value="+"/>
-            <script>
-                document.getElementById("addbtn")
-                    .addEventListener("click", () => {
-                        window.location.replace("../pages/new_faq.php");
-                    });
-                </script>
-            </div>';
-        }?>
+            <?php if($_SESSION['type'] = 'Admin'){
+                echo '<div class="box_btn">
+                <input type="button" id="addbtn" value="+"/>
+                <script src="../javascript/faq.js"></script>
+                </div>';
+            }?>
+        </section>
     </div>
 </body>
 </html>

@@ -16,10 +16,6 @@
                     <input type="text" placeholder="Username" name="username" required>
                     <input type="password" placeholder="Password" name="pass" required>
 
-                    <div id="forgot_psw">
-                        <a href="../pages/forgot_psw.php">Forgot password?</a>
-                    </div>
-
                     <div class="clearfix">
                         <button type="submit" class="loginbtn">Login</button>
                     </div>

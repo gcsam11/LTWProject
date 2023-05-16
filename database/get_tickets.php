@@ -11,7 +11,7 @@
         $stmt2 -> execute();
         $row2 = $stmt2 -> fetch();
 
-        echo '<h2><a class="ticket_readmore" href="../pages/ticket.php?id=' . $row['ticket_id'] . '">' . $row['title'] . '</a></h2>
+        echo '<h2><a class="ticket_readmore" href="../pages/ticket.php?id='.$row['ticket_id'].'&site=all_tickets">' . $row['title'] . '</a></h2>
         <div class="ticket">
         <div class="ticket_main_info"> <span class="ticket_username"> By <a class="ticket_username_link" href="../pages/profile_viewer.php?id=' .$row['user_id'] . '">' . $row2['username'] . '</a> </span>
         <span class="ticket_status">' . $row['status'] . '</span>

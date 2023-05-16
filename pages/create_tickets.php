@@ -43,6 +43,9 @@
 			<label for="description">Description:</label>
 			<textarea id="description" name="description" required></textarea>
 
+			<label for="hashtag">Hashtag:</label>
+			<input type="text" id="hashtag" name="hashtag">
+
 			<div class="clearfix">
 				<button type="submit" class="submitbtn">Submit</button>
 			</div>

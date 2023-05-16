@@ -13,8 +13,8 @@
             $user_id = $_SESSION['user_id'];
             $date = date("Y-m-d");
 
-            if($_POST['department'] == "0" && $_POST['priority'] == "none"){
-                $stmt = $db->prepare('INSERT INTO Ticket (title, description, user_id, date) VALUES (:subject, :description, :user_id, :date)');
+            if(($_POST['department'] == "0") && ($_POST['priority'] == "none")){
+                $stmt = $db->prepare('INSERT INTO Ticket (title, description, user_id, date, hashtag) VALUES (:subject, :description, :user_id, :date, :hashtag)');
                 $stmt->bindParam(':subject', $subject);
                 $stmt->bindParam(':description', $description);
                 $stmt->bindParam(':user_id', $user_id);
@@ -57,13 +57,21 @@
                 $stmt->execute();
             }
 
-
             $ticket_id = $db->lastInsertId();
+
             $stmt = $db->prepare('INSERT INTO TICKET_CHANGES (ticket_id, user_id, date, type) VALUES (:ticket_id, :user_id, :date, "Ticket Creation")');
             $stmt->bindParam(':ticket_id', $ticket_id);
             $stmt->bindParam(':user_id', $user_id);
             $stmt->bindParam(':date', $date);
             $stmt->execute();
+
+            if(!empty($_POST['hashtag']) && (strlen($_POST['hashtag']) <= 255)){
+                $hashtag = $_POST['hashtag'];
+                $stmt = $db->prepare('UPDATE TICKET SET hashtag = :hashtag WHERE ticket_id = :ticket_id ');
+                $stmt->bindParam(':hashtag', $hashtag);
+                $stmt->bindParam(':ticket_id', $ticket_id);
+                $stmt->execute();
+            }
 
             header('Location:../pages/my_tickets.php');
         }

@@ -1,7 +1,7 @@
 <?php 
     include 'connection.php';
 
-    if ( !preg_match ("/^[a-zA-Z\s]+$/", $_GET['type']) && is_numeric($_GET['id'])) {
+    if ( $_GET['type'] && is_numeric($_GET['id'])) {
         
         $stmt = $db->prepare('UPDATE USER SET type=:type WHERE user_id = :user_id');
         $stmt->bindParam(':type', $_GET['type']);

@@ -10,6 +10,10 @@
         header('Location:../index.php');
     }
 
+    if(!isset($_SESSION['filter'])){
+        $_SESSION['filter'] = false;
+    }
+
     if(!isset($_SESSION['csrf'])){
         $_SESSION['csrf'] = generate_random_token();
     }

@@ -28,7 +28,14 @@
 	<link rel="stylesheet" href="../css/ticket.css">
 </head>
     <body>
-        <a class="backbtn" href="../pages/all_tickets.php"> <- Back</a>
+        <?php 
+        if($_GET['site'] == 'all_tickets'){
+            echo '<a class="backbtn" href="../pages/all_tickets.php"> <- Back</a>';
+        }
+        else{
+            echo '<a class="backbtn" href="../pages/my_tickets.php"> <- Back</a>';
+        }
+        ?>
         <header>
             <h1><?php echo $row3['title'] ?></h1>
             <hr>
@@ -127,13 +134,17 @@
                 </div>
             </div>
 
+            <div class="hashtag_container">
+                <p id="hashtag">#<?php echo $row3['hashtag']; ?></p>
+            </div>
             <br>
+
             <div class="ticket_description_container">
                 <div class="ticket_description">
                     <?php echo $row3['description'] ?>
                 </div>
             </div>
-
+            
             <?php 
                 if($_SESSION['type'] != 'Client'){
                     echo '<br><br><p class="changes_history"><a class="ticketchanges" href="../pages/changes_list.php?id=' . $ticketid . '">Changes History</a></p>';
@@ -154,10 +165,8 @@
                     <input type="hidden" name="csrf" value="'.$_SESSION['csrf'].'">
 
                     <textarea class="comment" name="comment" placeholder="Write a comment..."></textarea><br>
-                    <button type="submit" class="submitcommentbtn">Submit</button></form>
+                    <div id="sub_comment_btn"><button type="submit" id="submitcommentbtn">Submit</button></div></form>
                 </form>';
-
-                echo 
             }
         ?>
     </body>

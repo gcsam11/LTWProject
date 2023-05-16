@@ -25,6 +25,12 @@
             $stmt->bindParam(':ticket_id', $_GET['id']);
             $stmt->execute();
         }
+        if(!empty($_POST['hashtag']) && (strlen($_POST['hashtag']) <=255)){
+            $stmt = $db->prepare('UPDATE TICKET SET hashtag = :hashtag WHERE ticket_id = :ticket_id');
+            $stmt->bindParam(':hashtag', $_POST['hashtag']);
+            $stmt->bindParam(':ticket_id', $_GET['id']);
+            $stmt->execute();
+        }
 
         $stmt = $db->prepare('INSERT INTO TICKET_CHANGES (ticket_id, user_id, date, type) VALUES (:ticket_id, :user_id, :date, "Ticket Edited")');
         $stmt->bindParam(':ticket_id', $_GET['id']);

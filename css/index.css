@@ -19,7 +19,7 @@ body {
 * {box-sizing: border-box}
 
 
-.loginbtn {
+#loginbtn {
   background-color: var(--clr-bg);
   color: var(--clr-neon);
   padding: 14px 20px;
@@ -37,7 +37,7 @@ body {
   box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
 }
 
-.loginbtn:hover {
+#loginbtn:hover {
   background-color: var(--clr-neon);
   color: var(--clr-bg);
   padding: 14px 20px;
@@ -54,7 +54,7 @@ body {
   text-shadow: none;
 }
 
-.signupbtn {
+#signupbtn {
   background-color: var(--clr-bg);
   color: var(--clr-neon);
   padding: 14px 20px;
@@ -72,7 +72,7 @@ body {
   box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
 }
 
-.signupbtn:hover {
+#signupbtn:hover {
   background-color: var(--clr-neon);
   color: var(--clr-bg);
   padding: 14px 20px;
