@@ -22,7 +22,15 @@
 
         <div class="box">
             <div class="currentDeps">
-                <?php include '../database/fetchDepartments.php' ?>
+                <?php 
+
+                    $stmt = $db->prepare('SELECT * FROM DEPARTMENT');
+                    $stmt->execute();
+                
+                    while($row = $stmt->fetch()){
+                        echo '<span class="department">'.$row['name'].'</span><br>';
+                    }
+                ?>
             </div>
 
             <div class="addDep">

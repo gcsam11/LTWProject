@@ -1,10 +1,11 @@
 <?php 
     include '../database/checkSession.php';
-    include '../database/fetchTicket.php';
 
     if(!is_numeric($_GET['id'])){
-        header('Location:../pages/all_tickets.php');
+        //header('Location:../pages/all_tickets.php');
     }
+
+    include '../database/fetchTicket.php';
 
     $ticketid = $_GET['id'];
     $userid = $row3['user_id'];
@@ -167,6 +168,7 @@
                     <textarea class="comment" name="comment" placeholder="Write a comment..."></textarea><br>
                     <div id="sub_comment_btn"><button type="submit" id="submitcommentbtn">Submit</button></div></form>
                 </form>';
+                echo '<a href="../pages/faq_comment.php?id=' . $ticketid . '">FAQ Answer</a>';
             }
         ?>
     </body>

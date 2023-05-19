@@ -24,6 +24,8 @@
             <script src="../javascript/edit_dep.js"></script>
             <input type="button" id="userlist" value="User List"/>
             <script src="../javascript/userlist.js"></script>
+            <input type="button" id="editFAQ" value="Edit FAQ"/>
+            <script src="../javascript/edit_faq.js"></script>
         </div>
     </body>
 </html>
