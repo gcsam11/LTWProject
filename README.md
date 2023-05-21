@@ -7,6 +7,13 @@ This project uses HTML, CSS, PHP, JavaScript and JSON, as well as SQLite/PDO.
 The **index.php** file is located within the root folder. 
 Therefore, the user only needs to change directory to the cloned project folder and start the localhost from the terminal. 
 
+```
+git clone <url>
+cd <folder>
+git checkout final-delivery-v1
+php -S localhost:9000
+```
+
 ## Accounts
 
 Accounts have already been created so that the user can see how the website works from the multiple account types. These are: Client, Agent and Admins.
