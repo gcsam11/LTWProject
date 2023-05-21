@@ -25,14 +25,14 @@
                 <hr>
             </header>
         </div>
-        <div class="box">
+        <div class="content">
             <form action="../database/insertFAQComment.php?id=<?=$ticketid?>" method="post">
                 <select name="faq">
                     <?php
                         include '../database/fetchFAQComments.php';
                     ?>
                 </select>
-                <input type="submit" value="Submit">
+                <input id="submit_btn" type="submit" value="Submit">
             </form>
         </div>
     </body>

@@ -141,10 +141,6 @@ label {
 	color: var(--clr-neon);
 }
 
-textarea {
-	resize: vertical;
-}
-
 select, input[type="text"], textarea {
 	padding: 10px;
 	border-radius: 5px;
@@ -152,4 +148,14 @@ select, input[type="text"], textarea {
 	margin-bottom: 10px;
 	width: 100%;
 	box-sizing: border-box;
+	background-color: #f1f1f1;
+}
+
+select:focus, input[type="text"]:focus, textarea:focus {
+	outline: none;
+	background-color: #ddd;
+}
+
+textarea {
+	resize: vertical;
 }

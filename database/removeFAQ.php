@@ -6,7 +6,7 @@
         header('Location:../pages/index.php');
     }
 
-    if(!empty($_POST['faq'])){
+    if(!empty($_POST['faq']) && ($_POST['faq'] != 'none')){
         $faq = $_POST['faq'];
 
         $stmt = $db->prepare('DELETE FROM FAQ WHERE faq_id = :faq_id');

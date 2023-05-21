@@ -112,10 +112,22 @@
                         echo '<label for="type">Type: <strong>' . $row['type'] . '</strong></label> 
                         <br><br>';
                     }
+                    
+                    echo '<div class="departments">';
 
                     echo '<label for="department">Department: <strong>' . $department . '</strong></label>
-                        <br><br>
-                    </div>';
+                        <br><br>';
+
+                    if($_SESSION['type'] == 'Admin'){
+                        echo '<form action="../database/alterDepartment.php?id='.$_GET['id'].'" method="post">
+                        <select name="department">
+                        <option value="none">---</option>';
+                        include '../database/fetchDepartments.php';
+                        echo '</select>
+                        <button type="submit" class="changedepbtn">Change</button>
+                        </form>';
+                    }
+                    echo '</div></div>';
                 }
                 ?>
             </div>

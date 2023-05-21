@@ -21,19 +21,17 @@
         </div>
 
         <div class="box">
-            <div class="currentFAQ">
+            <section class="currentFAQ">
                 <?php 
 
                     $stmt = $db->prepare('SELECT * FROM FAQ');
                     $stmt->execute();
                     
-                    echo '<div class="faq_questions">';
                     while($result = $stmt -> fetch()){
-                        echo '<span class="question">'.$result['question'].'</span><br>';
+                        echo '<span class="question">'.$result['question'].'</span>';
                     }
-                    echo '</div>';
                 ?>
-            </div>
+            </section>
 
             <div class="addFAQs">
                 <input type="button" id="addFAQ" value="Add FAQ"/>

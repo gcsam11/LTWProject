@@ -89,10 +89,6 @@ hr {
     padding-right: 15%;
 }
 
-.assigned_agent {
-    margin-top: 20px;
-}
-
 .ticket_username_link {
     color: var(--clr-neon_green);
     text-decoration: none;
@@ -116,6 +112,7 @@ select:focus {
 }
 
 .changeticketdepbtn {
+    cursor: pointer;
     text-decoration: none;
     color: var(--clr-neon_green);
     text-transform: capitalize;
@@ -145,6 +142,7 @@ select:focus {
 }
 
 .changeassignedagentbtn {
+    cursor: pointer;
     text-decoration: none;
     color: var(--clr-neon_green);
     text-transform: capitalize;
@@ -174,6 +172,7 @@ select:focus {
 }
 
 .deassign{
+    cursor: pointer;
     text-decoration: none;
     color: var(--clr-neon_red);
     text-transform: capitalize;
@@ -202,6 +201,7 @@ select:focus {
 }
 
 .closeticket{
+    cursor: pointer;
     text-decoration: none;
     color: var(--clr-neon_red);
     text-transform: capitalize;
@@ -231,6 +231,7 @@ select:focus {
 }
 
 .reopenticket{
+    cursor: pointer;
     text-decoration: none;
     color: var(--clr-neon_green);
     text-transform: capitalize;
@@ -351,6 +352,7 @@ select:focus {
 }
 
 #submitcommentbtn {
+    cursor: pointer;
     text-decoration: none;
     color: var(--clr-neon_green);
     text-transform: capitalize;
@@ -376,6 +378,39 @@ select:focus {
     border-radius: 32px;
     background-color: var(--clr-neon_green);
     padding: 5px 15px;
+    text-shadow: none;
+    transition: opacity 100ms linear;
+}
+
+#faq_btn {
+    text-align: center;
+}
+#faq_answer_btn {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon_green);
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: medium;
+    border: 1px solid var(--clr-neon_green);
+    border-radius: 32px;
+    background-color: white;
+    padding: 5px 10px;
+    text-shadow: 0 0 0.0625em hsl(0 0% 100% / 0.5), 0 0 0.225em var(--clr-neon_green);
+    box-shadow: inset 0 0 0.25em 0 var(--clr-neon_green), 0 0 0.25em 0 var(--clr-neon_green);
+    transition: opacity 100ms linear;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+#faq_answer_btn:hover {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: medium;
+    border: 1px solid var(--clr-neon_green);
+    border-radius: 32px;
+    background-color: var(--clr-neon_green);
     text-shadow: none;
     transition: opacity 100ms linear;
 }

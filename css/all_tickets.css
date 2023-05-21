@@ -116,7 +116,7 @@ label {
 	margin-bottom: 5px;
 }
 
-select, input[type="date"], textarea {
+select, input[type="date"], #hashtag_filter {
 	padding: 10px;
 	border-radius: 5px;
 	border: 1px solid #d6d8db;
@@ -126,13 +126,13 @@ select, input[type="date"], textarea {
 	background-color: #f1f1f1;
 }
 
-select:focus , input[type="date"]:focus, textarea:focus {
+select:focus, input[type="date"]:focus, #hashtag_filter:focus {
 	outline: none;
 	background-color: #ddd;
 }
 
-textarea {
-	resize: vertical;
+#hashtag_filter {
+	margin-bottom: 20px;
 }
 
 .clearfix {

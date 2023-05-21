@@ -67,7 +67,18 @@
 			    	</select>
 
 					<label for="hashtag-filter">Hashtag:</label>
-					<textarea autocomplete="on" class="hashtag-filter-textarea" name="hashtag" placeholder=""></textarea>
+					<!--<textarea autocomplete="on" class="hashtag-filter-textarea" name="hashtag" placeholder=""></textarea>-->
+					<input list="hashtags" name="hashtag" id="hashtag_filter" placeholder="">
+					<datalist id="hashtags">
+						<?php 
+							$stmt = $db->prepare('SELECT DISTINCT hashtag FROM TICKET');
+							$stmt->execute();
+
+							while($h = $stmt->fetch()){
+								echo '<option value="'.$h['hashtag'].'"></option>';
+							}
+						?>
+					</datalist>
 
                 	<div class="clearfix">
 				    	<button type="submit" class="filterbtn">Filter</button>
