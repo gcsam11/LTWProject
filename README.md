@@ -8,8 +8,8 @@ The **index.php** file is located within the root folder.
 Therefore, the user only needs to change directory to the cloned project folder and start the localhost from the terminal. 
 
 ```
-git clone <url>
-cd <folder>
+git clone git@github.com:FEUP-LTW-2023/project-ltw02g04.git
+cd project-ltw02g04
 git checkout final-delivery-v1
 php -S localhost:9000
 ```
