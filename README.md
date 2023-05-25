@@ -21,9 +21,12 @@ Accounts have already been created so that the user can see how the website work
 ```
 For a Client-side view:
 - Username: client1, Password: client1
+- Username : client2, Password: client2
     
 For an Agent-side view:
 - Username: agent1, Password: agent1
+- Username: agent2, Password: agent2
+- Username: agent3, Password: agent3
 
 For an Admin-side view:
 - Username: admin1, Password: admin1
