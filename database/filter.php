@@ -32,7 +32,7 @@
         }
     }
     if($_POST['status'] != 'none'){
-        if(!empty($_POST['hashtag']) || $_POST['department'] != 'none'){
+        if(!empty($_POST['hashtag']) || $_POST['department'] != 'none' || $_POST['agent'] != 'none'){
             $query = $query . " AND STATUS = '" . $_POST['status'] . "'";
         }
         else{
@@ -40,7 +40,7 @@
         }
     }
     if($_POST['priority'] != 'none'){
-        if(!empty($_POST['hashtag']) || $_POST['department'] != 'none' || $_POST['status'] != 'none'){
+        if(!empty($_POST['hashtag']) || $_POST['department'] != 'none' || $_POST['status'] != 'none' || $_POST['agent'] != 'none'){
             $query = $query . " AND PRIORITY = '" . $_POST['priority'] . "'";
         }
         else{

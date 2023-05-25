@@ -10,7 +10,7 @@
     include 'connection.php';
     session_start();
 
-    $stmt = $db->prepare('UPDATE TICKET SET assigned_agent = NULL WHERE ticket_id = :ticket_id');
+    $stmt = $db->prepare('UPDATE TICKET SET assigned_agent = NULL AND status = "Open" WHERE ticket_id = :ticket_id');
     $stmt->bindParam(':ticket_id', $ticketid2);
     $stmt->execute();
 
